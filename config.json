@@ -1,0 +1,26 @@
+{
+  "log": { "loglevel": "warning" },
+  "inbounds": [
+    {
+      "listen": "0.0.0.0",
+      "port": 8080,
+      "protocol": "vless",
+      "settings": {
+        "clients": [{ "id": "PUT-YOUR-UUID-HERE", "flow": "xtls-rprx-vision" }],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "show": false,
+          "dest": "www.google.com:443",
+          "serverNames": ["www.google.com"],
+          "privateKey": "PUT-YOUR-PRIVATE-KEY-HERE",
+          "shortIds": ["abcd"]
+        }
+      }
+    }
+  ],
+  "outbounds": [{ "protocol": "freedom" }]
+}
